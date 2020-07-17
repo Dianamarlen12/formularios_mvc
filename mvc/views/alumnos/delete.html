@@ -1,0 +1,118 @@
+<html>
+  <title>Formulario</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style type="text/css">
+      body { background-color: rgba(102, 183, 230, 0.637); }
+      header{
+  width: 100%;
+  padding: 0px;
+  color: white;
+  text-align: center;
+}
+nav ul{
+  width: 100%;
+  background-color: rgb(81, 176, 231);
+  color: rgb(255, 254, 254);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  letter-spacing: normal;
+  overflow: hidden;
+  -webkit-transition: max-height 0.4s;
+  -ms-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+}
+/*BARRA PEQUEÑA DEL TITULO*/
+nav ul li{
+  display: inline-block;
+  padding: 15px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  display: absolute;
+}
+section{
+  line-height: 1.5em;
+  font-size: 0.9em;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 960px;
+}
+    </style>
+  <body>
+      <header>
+          <a href="index.html">
+                <img src="https://image.flaticon.com/icons/png/512/69/69524.png" style="height:50px; width:50px" alt>
+            </a>
+        </header>
+        <br>
+        <nav>
+          <ul>
+              <a href="list.html">
+                  <li>
+                    <h4>LISTA</h4>
+                  </li>
+                </a>
+                <a href="insert.html">
+                  <li>
+                    <h4>INSERTAR</h4>
+                  </li>
+                </a>
+                <a href="delete.html">
+                  <li>
+                    <h4>BORRAR</h4>
+                  </li>
+                </a>
+                <a href="view.html">
+                  <li>
+                    <h4>VER ALUMNO</h4>
+                  </li>
+                </a>
+                <a href="update.html">
+                  <li>
+                    <h4>MODIFICAR</h4>
+                  </li>
+                </a>  
+          </ul>
+        </nav>
+<body>
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Matricula</th><br>
+                <th scope="col">Nombre</th>
+                <th scope="col">Primer apellido</th>
+                <th scope="col">Segundo apellido</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Fecha de nacimiento</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><input type="reset" value="Borrar información"></td>
+                </tr>
+              </tbody>
+          </table>
+    </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <title>Formulario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css">
+        body { background-color: rgba(102, 183, 230, 0.637); }
+        header{
+    width: 100%;
+    padding: 0px;
+    color: white;
+    text-align: center;
+}
+nav ul{
+    width: 100%;
+    background-color: rgb(81, 176, 231);
+    color: rgb(255, 254, 254);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    letter-spacing: normal;
+    overflow: hidden;
+    -webkit-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+}
+/*BARRA PEQUEÑA DEL TITULO*/
+nav ul li{
+    display: inline-block;
+    padding: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    display: absolute;
+}
+section{
+    line-height: 1.5em;
+    font-size: 0.9em;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 960px;
+}
+      </style>
+    <body>
+        <header>
+            <a href="index.html">
+                  <img src="https://image.flaticon.com/icons/png/512/69/69524.png" style="height:50px; width:50px" alt>
+              </a>
+          </header>
+          <br>
+          <nav>
+            <ul>
+                <a href="list.html"><li><h4>LISTA</h4></li></a>
+                <a href="insert.html"><li><h4>INSERTAR</h4></li></a>
+                <a href="delete.html"><li><h4>BORRAR</h4></li></a>
+                <a href="view.html"><li><h4>VER ALUMNO</h4></li></a>
+                <a href="update.html"><li><h4>MODIFICAR</h4></li></a>  
+            </ul>
+          </nav>
+    <center>
+    <form method="POST" action="" class="pure-form pure-form-aligned">
+        <div class="inputBox">
+            <h1>FORMULARIO</h1>
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="aligned-name">Matricula</label>
+                <input type="number" id="aligned-number" placeholder="Ingresa Matricula" />
+            </div>
+            <br>
+            <div class="pure-control-group">
+                <label for="aligned-name">Nombre</label>
+                <input type="text" id="aligned-name" placeholder="Ingresa nombre" />
+            </div>
+            <br>
+            <div class="pure-control-group">
+                <label for="aligned-apepate">A.Paterno</label>
+                <input type="text" id="aligned-apepate" placeholder="Ingresa apellido" />
+            </div>
+            <br>
+            <div class="pure-control-group">
+                <label for="aligned-apemate">A.materno</label>
+                <input type="text" id="aligned-apemate" placeholder="Ingresa apellido" />
+                <span class="validity"></span>
+            </div>
+            <br>
+            <div class="pure-control-group">
+                <label for="stacked-state">Edad</label>
+                <select id="stacked-state">
+                    <option>Elige</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                </select>  años
+            </div>
+            <br>
+            <div class="pure-control-group">
+                <label for="stacked-state">Fecha de Nacimiento</label>
+                <input type="date" id="party" min="1975-01-01" max="2050-01-01" required>
+                <span class="validity"></span>
+            </div>
+            <br>
+            <div class="pure-control-group">
+                <label for="stacked-state">Sexo</label>
+                    <input type="radio" id="checkbox-radio-option-two" name="optionsRadios" value="option1" checked="" /> Femenino</label>
+                    <input type="radio" id="checkbox-radio-option-two" name="optionsRadios" value="option1" checked="" /> Masculino</label>
+            </div>
+            <br>
+            <div class="pure-control-group">
+                <label for="stacked-state">Estado</label>
+                <select id="stacked-state">
+                    <option>Elige</option>
+                    <option>Soltero</option>
+                    <option>Casado</option>
+                </select>
+            </div>
+            <br>
+            <div class="pure-controls">
+                <label for="aligned-cb" class="pure-checkbox">
+                <button type="submit" class="pure-button pure-button-primary">Guardar</button>
+            </div>
+        </div>
+        </fieldset>
+    </form>
+    <!--VALIDACIÓN DE CAMPOS-->
+    <script>
+        var form = document.querySelector('.needs-validation');
+
+        form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        })
+    </script>
+    </center>
+    </body>
+</html>
