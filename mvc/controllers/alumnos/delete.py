@@ -1,6 +1,6 @@
 import web
 
-render = web.template.render("mvc/views/personas/", base="template)
+render = web.template.render("mvc/views/almunos/", base="template)
 
 class Delete():
 
