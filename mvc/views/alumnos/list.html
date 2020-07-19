@@ -70,40 +70,23 @@ section{
           </ul>
           </ul>
         </nav>
-    <body>
-      $def with(result)
-
-<!DOCTYPE html>
-<html lang="en">
-
-  <body>
-    <!--Vista inicial-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a href="#" class="navbar-brand">List Data</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
-
-    <!-- Page Content -->
-    <main role="main" class="container my-auto">
-      <br></br>
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Matricula</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Primer Apellido</th>
-              <th scope="col">Segundo Apellido</th>
-              <th scope="col">Edad</th>
-              <th scope="col">Fecha de Nacimiento</th>
-              <th scope="col">Sexo</th>
-              <th scope="col">Estado</th>
-            </tr>
-          </thead>
-          <tbody>
-            $for row in result:
+<body>
+        <table class="table table-hover">
+            <thead>
               <tr>
+                <th scope="col">Matricula</th><br>
+                <th scope="col">Nombre</th>
+                <th scope="col">Primer apellido</th>
+                <th scope="col">Segundo apellido</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Fecha de nacimiento</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              $for row in result:
+               <tr>
                 <td>$row['matricula']</td>
                 <td>$row['nombre']</td>
                 <td>$row['apellido_paterno']</td>
@@ -113,7 +96,7 @@ section{
                 <td>$row['sexo']</td>
                 <td>$row['estado_civil']</td>
               </tr>
-            </tbody>
-        </table>
+              </tbody>
+          </table>
     </body>
 </html>

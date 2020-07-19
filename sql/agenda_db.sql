@@ -1,4 +1,3 @@
-DROP DATABASE IF EXISTS escuela;
 CREATE DATABASE IF NOT EXISTS escuela;
 USE escuela;
 SELECT DATABASE();
@@ -13,16 +12,13 @@ apellido_materno        VARCHAR(20)         NOT NULL,
 edad					CHAR(2)				NOT NULL,
 fecha_nacimiento		DATE,
 sexo					CHAR(10)			NOT NULL,
-estado_civil			CHAR(10)			NOT NULL,
-) ENGINE= InnoDB DEFAULT CHARSET=latin1;
+estado_civil			CHAR(10)			NOT NULL
+)ENGINE= InnoDB DEFAULT CHARSET=latin1;
 
 /*INSERCION DE DOS ALUMNOS*/
 INSERT INTO alumnos(id_alumno, matricula, nombre, apellido_paterno, apellido_materno, edad, fecha_nacimiento, sexo, estado_civil) VALUES 
-(NULL, '1718110399', 'Diana Marlen', 'Meneses', 'Alegria', '20', '12/03/2000', 'Femenino', 'Soltera');
+(NULL, '1718110399', 'Diana Marlen', 'Meneses', 'Alegria', '20', '2000/03/12', 'Femenino', 'Soltera');
 
 INSERT INTO alumnos(id_alumno, matricula, nombre, apellido_paterno, apellido_materno, edad, fecha_nacimiento, sexo, estado_civil) VALUES 
-(NULL, '1718110300', 'Dania Jimena', 'Meneses', 'Alegria', '17', '01/11/2002', 'Femenino', 'Soltera');
+(NULL, '1718110300', 'Dania Jimena', 'Meneses', 'Alegria', '17', '2002/11/01', 'Femenino', 'Soltera');
 
-CREATE USER 'user_agenda'@'localhost' IDENTIFIED BY 'Agenda.2020';
-GRANT ALL PRIVILEGES ON agenda_db.* TO 'user_agenda'@'localhost';
-FLUSH PRIVILEGES;
