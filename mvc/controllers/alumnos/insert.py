@@ -1,6 +1,6 @@
 import web
 
-render = web.template.render("mvc/views/alumnos/", base="template)
+render = web.template.render("mvc/views/alumnos/")
 
 class Insert():
 
@@ -15,4 +15,4 @@ class Insert():
             form = web.input()
             print(form)
         except Exception as e:
-            return "Error "
+            return "Error"

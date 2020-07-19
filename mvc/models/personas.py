@@ -1,11 +1,11 @@
 import mysql.connector
 
-class Personas():
-
+class Alumnos():
+    
     def connect(self):
         try:
             self.cnx = mysql.connector.connect(
-                user='user_agenda', 
+                user='Mongo_db', 
                 password='Agenda.2020',
                 host='127.0.0.1',
                 port=3309,
@@ -15,41 +15,26 @@ class Personas():
         except Exception as e:
             print(e)
 
+    " METODO PARA SELECCIONAR "
     def select(self):
         try:
             self.connect()
-            query = ("SELECT * from personas;")
+            query = ("SELECT * FROM alumnos;")
             self.cursor.execute(query)
             result = []
             for row in self.cursor:
-                r = {
-                    'id_persona':row[0],
-                    'nombre':row[1],
-                    'email':row[2]
+                diccionario = {
+                    "id_alumno":row[0],
+                    "matricula":row[1],
+                    "nombre":row[2],
+                    "apellido_paterno":row[3],
+                    "apellido_materno":row[4],
+                    "edad":row[5],
+                    "fecha_nacimiento":row[6],
+                    "sexo":row[7],
+                    "estado_civil":row[8]
                 }
-                result.append(r)
-            self.cursor.close()
-            self.cnx.close()
-            return result
-        except Exception as e:
-            print(e)
-            result = []
-            return result
-    
-    def view(self,id_persona):
-        try:
-            self.connect()
-            query = ("SELECT * from personas where id_persona = %s;")
-            values = (id_persona,)
-            self.cursor.execute(query,values)
-            result = []
-            for row in self.cursor:
-                r = {
-                    'id_persona':row[0],
-                    'nombre':row[1],
-                    'email':row[2]
-                }
-                result.append(r)
+                result.append(diccionario)
             self.cursor.close()
             self.cnx.close()
             return result
@@ -58,51 +43,8 @@ class Personas():
             result = []
             return result
 
-    def insert(self, nombre, email):
-        try:
-            self.connect()
-            query = ("INSERT INTO personas (nombre,email) values(%s,%s);")
-            values = (nombre, email)
-            self.cursor.execute(query, values)
-            self.cnx.commit()
-            self.cursor.close()
-            self.cnx.close()
-            return True
-        except Exception as e:
-            print(e)
-            return False
+object = Alumnos()
+object.connect()
 
-    def update(self,id_persona, nombre, email):
-        try:
-            self.connect()
-            query = ("UPDATE personas SET nombre=%s, email=%s WHERE id_persona=%s;")
-            values = (nombre, email, id_persona)
-            self.cursor.execute(query, values)
-            self.cnx.commit()
-            self.cursor.close()
-            self.cnx.close()
-            return True
-        except Exception as e:
-            print(e)
-            return False
-
-    def delete(self, id_persona):
-        try:
-            self.connect()
-            query = ("DELETE FROM personas WHERE id_persona = %s;")
-            values = (id_persona,)
-            self.cursor.execute(query, values)
-            self.cnx.commit()
-            self.cursor.close()
-            self.cnx.close()
-            return True
-        except Exception as e:
-            print(e)
-            return False
-
-'''
-objeto = Personas()
-objeto.delete(9)
-for row in objeto.select():
+for row in object.select():
     print(row)
-'''

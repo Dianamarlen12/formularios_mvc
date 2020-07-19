@@ -52,19 +52,21 @@ section{
       </style>
     <body>
         <header>
-            <a href="index.html">
+            <a href="/">
                   <img src="https://image.flaticon.com/icons/png/512/69/69524.png" style="height:50px; width:50px" alt>
               </a>
           </header>
           <br>
           <nav>
             <ul>
-                <a href="list.html"><li><h4>LISTA</h4></li></a>
-                <a href="insert.html"><li><h4>INSERTAR</h4></li></a>
-                <a href="delete.html"><li><h4>BORRAR</h4></li></a>
-                <a href="view.html"><li><h4>VER ALUMNO</h4></li></a>
-                <a href="update.html"><li><h4>MODIFICAR</h4></li></a>  
-            </ul>
+                <li class="nav-item">
+                  <a href="/list"><li><h4>LISTA</h4></li></a>
+                  <a href="/insert"><li><h4>INSERTAR</h4></li></a>
+                  <a href="/delete"><li><h4>BORRAR</h4></li></a>
+                  <a href="/view"><li><h4>VER ALUMNO</h4></li></a>
+                  <a href="/update"><li><h4>MODIFICAR</h4></li></a>  
+              </li>
+              </ul>
           </nav>
     <center>
     <form method="POST" action="" class="pure-form pure-form-aligned">
@@ -73,7 +75,7 @@ section{
         <fieldset>
             <div class="pure-control-group">
                 <label for="aligned-name">Matricula</label>
-                <input type="number" id="aligned-number" placeholder="Ingresa Matricula" />
+                <input type="number" id="aligned-number" name="aligned-number" placeholder="Ingresa Matricula" />
             </div>
             <br>
             <div class="pure-control-group">
@@ -83,18 +85,18 @@ section{
             <br>
             <div class="pure-control-group">
                 <label for="aligned-apepate">A.Paterno</label>
-                <input type="text" id="aligned-apepate" placeholder="Ingresa apellido" />
+                <input type="text" id="aligned-apepate" name="aligned-apepate" placeholder="Ingresa apellido" />
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="aligned-apemate">A.materno</label>
-                <input type="text" id="aligned-apemate" placeholder="Ingresa apellido" />
+                <input type="text" id="aligned-apemate" name="aligned-apemate" placeholder="Ingresa apellido" />
                 <span class="validity"></span>
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="stacked-state">Edad</label>
-                <select id="stacked-state">
+                <select id="stacked-state" name="stacked-state">
                     <option>Elige</option>
                     <option>12</option>
                     <option>13</option>
@@ -114,7 +116,7 @@ section{
             <br>
             <div class="pure-control-group">
                 <label for="stacked-state">Fecha de Nacimiento</label>
-                <input type="date" id="party" min="1975-01-01" max="2050-01-01" required>
+                <input type="date" id="party" name="party" min="1975-01-01" max="2050-01-01" required>
                 <span class="validity"></span>
             </div>
             <br>
@@ -126,7 +128,7 @@ section{
             <br>
             <div class="pure-control-group">
                 <label for="stacked-state">Estado</label>
-                <select id="stacked-state">
+                <select id="stacked-state" ="stacked-state">
                     <option>Elige</option>
                     <option>Soltero</option>
                     <option>Casado</option>

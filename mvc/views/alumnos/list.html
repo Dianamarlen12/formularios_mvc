@@ -1,3 +1,5 @@
+$def with(result)
+
 <html>
   <title>Formulario</title>
   <meta charset="UTF-8">
@@ -51,66 +53,67 @@ section{
     </style>
   <body>
       <header>
-          <a href="index.html">
+          <a href="/">
                 <img src="https://image.flaticon.com/icons/png/512/69/69524.png" style="height:50px; width:50px" alt>
             </a>
         </header>
         <br>
         <nav>
           <ul>
-              <a href="list.html">
-                  <li>
-                    <h4>LISTA</h4>
-                  </li>
-                </a>
-                <a href="insert.html">
-                  <li>
-                    <h4>INSERTAR</h4>
-                  </li>
-                </a>
-                <a href="delete.html">
-                  <li>
-                    <h4>BORRAR</h4>
-                  </li>
-                </a>
-                <a href="view.html">
-                  <li>
-                    <h4>VER ALUMNO</h4>
-                  </li>
-                </a>
-                <a href="update.html">
-                  <li>
-                    <h4>MODIFICAR</h4>
-                  </li>
-                </a>  
+            <li class="nav-item">
+              <a href="/list"><li><h4>LISTA</h4></li></a>
+              <a href="/insert"><li><h4>INSERTAR</h4></li></a>
+              <a href="/delete"><li><h4>BORRAR</h4></li></a>
+              <a href="/view"><li><h4>VER ALUMNO</h4></li></a>
+              <a href="/update"><li><h4>MODIFICAR</h4></li></a>  
+          </li>
+          </ul>
           </ul>
         </nav>
-<body>
-        <table class="table table-hover">
-            <thead>
+    <body>
+      $def with(result)
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <body>
+    <!--Vista inicial-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">List Data</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <!-- Page Content -->
+    <main role="main" class="container my-auto">
+      <br></br>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Matricula</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Primer Apellido</th>
+              <th scope="col">Segundo Apellido</th>
+              <th scope="col">Edad</th>
+              <th scope="col">Fecha de Nacimiento</th>
+              <th scope="col">Sexo</th>
+              <th scope="col">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            $for row in result:
               <tr>
-                <th scope="col">Matricula</th><br>
-                <th scope="col">Nombre</th>
-                <th scope="col">Primer apellido</th>
-                <th scope="col">Segundo apellido</th>
-                <th scope="col">Edad</th>
-                <th scope="col">Fecha de nacimiento</th>
-                <th scope="col">Sexo</th>
-                <th scope="col">Estado</th>
+                <td>$row['matricula']</td>
+                <td>$row['nombre']</td>
+                <td>$row['apellido_paterno']</td>
+                <td>$row['apellido_materno']</td>
+                <td>$row['edad']</td>
+                <td>$row['fecha_nacimiento']</td>
+                <td>$row['sexo']</td>
+                <td>$row['estado_civil']</td>
               </tr>
-            </thead>
-            <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-          </table>
+            </tbody>
+        </table>
     </body>
 </html>

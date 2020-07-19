@@ -1,6 +1,6 @@
 import web
 
-render = web.template.render("mvc/views/almunos/", base="template)
+render = web.template.render("mvc/views/alumnos/")
 
 class Delete():
 
@@ -9,4 +9,3 @@ class Delete():
             return render.delete() # renderizando formulario.html
         except Exception as e:
             return "Error " + str(e.args)
-        
