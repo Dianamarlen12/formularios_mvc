@@ -87,8 +87,9 @@ section{
             <tbody>
               $for row in result:
                <tr>
+                <td>$row['id_alumno']</td>
                 <td>$row['matricula']</td>
-                <td>$row['nombre']</td>
+                <td><a href="/view/$row['id_alumno']">$row['nombre']</a></td>
                 <td>$row['apellido_paterno']</td>
                 <td>$row['apellido_materno']</td>
                 <td>$row['edad']</td>

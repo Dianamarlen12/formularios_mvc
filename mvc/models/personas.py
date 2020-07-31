@@ -1,5 +1,4 @@
 import mysql.connector
-
 class Alumnos():
     
     def connect(self):
@@ -42,6 +41,35 @@ class Alumnos():
             print(e)
             result = []
             return result
+
+    def view(self, id_alumno):
+        try:
+            self.connect()
+            query = ("SELECT * FROM alumnos where id_alumno = %s;")
+            values = (id_alumno,)
+            self.cursor.execute(query, values)
+            result = []
+            for row in self.cursor:
+                diccionario = {
+                    "id_alumno":row[0],
+                    "matricula":row[1],
+                    "nombre":row[2],
+                    "apellido_paterno":row[3],
+                    "apellido_materno":row[4],
+                    "edad":row[5],
+                    "fecha_nacimiento":row[6],
+                    "sexo":row[7],
+                    "estado_civil":row[8]
+                }
+                result.append(diccionario)
+            self.cursor.close()
+            self.cnx.close()
+            return result
+        except Exception as e:
+            print(e)
+            result = []
+            return result
+
 
 object = Alumnos()
 object.connect()

@@ -1,3 +1,4 @@
+$def with (result)
 <html>
   <title>Formulario</title>
   <meta charset="UTF-8">
@@ -68,31 +69,80 @@ section{
           </ul>
         </nav>
 <body>
-        <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Matricula</th><br>
-                <th scope="col">Nombre</th>
-                <th scope="col">Primer apellido</th>
-                <th scope="col">Segundo apellido</th>
-                <th scope="col">Edad</th>
-                <th scope="col">Fecha de nacimiento</th>
-                <th scope="col">Sexo</th>
-                <th scope="col">Estado</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-          </table>
+  <center>
+  <form method="POST" action="" class="pure-form pure-form-aligned">
+    <div class="inputBox">
+        <h1>FORMULARIO</h1>
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="aligned-name">Matricula</label>
+            <input type="number" readonly id="aligned-number" name="aligned-number" value="$result['matricula']" placeholder="Ingresa Matricula" />
+        </div>
+        <br>
+        <div class="pure-control-group">
+            <label for="aligned-name">Nombre</label>
+            <input type="text" readonly id="aligned-name" value="$result['nombre']" placeholder="Ingresa nombre" />
+        </div>
+        <br>
+        <div class="pure-control-group">
+            <label for="aligned-apepate">A.Paterno</label>
+            <input type="text" readonly id="aligned-apepate" name="aligned-apepate" value="$result['apellido_paterno']" placeholder="Ingresa apellido" />
+        </div>
+        <br>
+        <div class="pure-control-group">
+            <label for="aligned-apemate">A.materno</label>
+            <input type="text" readonly id="aligned-apemate" name="aligned-apemate" value="$result['apellido_materno']" placeholder="Ingresa apellido" />
+            <span class="validity"></span>
+        </div>
+        <br>
+        <div class="pure-control-group">
+            <label for="stacked-state">Edad</label>
+            <select readonly id="stacked-state" name="stacked-state" value="$result['edad']">
+                <option>Elige</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+            </select>  años
+        </div>
+        <br>
+        <div class="pure-control-group">
+            <label for="stacked-state">Fecha de Nacimiento</label>
+            <input type="date" readonly id="party" name="party" value="$result['fecha_nacimiento']" min="1975-01-01" max="2050-01-01" required>
+            <span class="validity"></span>
+        </div>
+        <br>
+        <div class="pure-control-group">
+            <label for="stacked-state">Sexo</label>
+                <input type="radio" readonly  id="checkbox-radio-option-two" name="optionsRadios" value="$result['sexo']" checked="" /> Femenino</label>
+                <input type="radio" readonly id="checkbox-radio-option-two" name="optionsRadios" value="$result['sexo']" checked="" /> Masculino</label>
+        </div>
+        <br>
+        <div class="pure-control-group">
+            <label for="stacked-state">Estado</label>
+            <select readonly id="stacked-state" value="$result['estado_civil']">
+                <option>Elige</option>
+                <option>Soltero</option>
+                <option>Casado</option>
+            </select>
+        </div>
+        <br>
+        <div class="pure-controls">
+            <label for="aligned-cb" class="pure-checkbox">
+            <button type="submit" class="pure-button pure-button-primary">Guardar</button>
+        </div>
+    </div>
+    </fieldset>
+</form>
+</center>
     </body>
 </html>

@@ -7,7 +7,7 @@ urls = (
     '/insert', 'mvc.controllers.alumnos.insert.Insert',
     '/list', 'mvc.controllers.alumnos.list.List',
     '/update', 'mvc.controllers.alumnos.update.Update',
-    '/view', 'mvc.controllers.alumnos.view.View',
+    '/view/(.*)', 'mvc.controllers.alumnos.view.View',
 )
 app = web.application(urls, globals())
 
