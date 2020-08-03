@@ -82,6 +82,8 @@ section{
                 <th scope="col">Fecha de nacimiento</th>
                 <th scope="col">Sexo</th>
                 <th scope="col">Estado</th>
+                <th scope="col">Delete</th>
+                <th scope="col">Update</th>
               </tr>
             </thead>
             <tbody>
@@ -96,6 +98,8 @@ section{
                 <td>$row['fecha_nacimiento']</td>
                 <td>$row['sexo']</td>
                 <td>$row['estado_civil']</td>
+                <td><a href="/delete/$row['id_alumno']">Delete</a></td>
+                <td><a href="/update/$row['id_alumno']">Update</a></td>
               </tr>
               </tbody>
           </table>

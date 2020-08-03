@@ -1,3 +1,4 @@
+$def with(result)
 <!DOCTYPE html>
 <html>
     <title>Formulario</title>
@@ -75,28 +76,28 @@ section{
         <fieldset>
             <div class="pure-control-group">
                 <label for="aligned-name">Matricula</label>
-                <input type="number" id="aligned-number" name="aligned-number" placeholder="Ingresa Matricula" />
+                <input type="number" id="aligned-number" name="aligned-number" value="$result['matricula']" placeholder="Ingresa Matricula" />
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="aligned-name">Nombre</label>
-                <input type="text" id="aligned-name" placeholder="Ingresa nombre" />
+                <input type="text" id="aligned-name" value="$result['nombre']" placeholder="Ingresa nombre" />
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="aligned-apepate">A.Paterno</label>
-                <input type="text" id="aligned-apepate" name="aligned-apepate" placeholder="Ingresa apellido" />
+                <input type="text" id="aligned-apepate" name="aligned-apepate" value="$result['apellido_paterno']" placeholder="Ingresa apellido" />
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="aligned-apemate">A.materno</label>
-                <input type="text" id="aligned-apemate" name="aligned-apemate" placeholder="Ingresa apellido" />
+                <input type="text" id="aligned-apemate" name="aligned-apemate" value="$result['apellido_materno']" placeholder="Ingresa apellido" />
                 <span class="validity"></span>
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="stacked-state">Edad</label>
-                <select id="stacked-state" name="stacked-state">
+                <select id="stacked-state" value="$result['edad']" name="stacked-state">
                     <option>Elige</option>
                     <option>12</option>
                     <option>13</option>
@@ -116,19 +117,19 @@ section{
             <br>
             <div class="pure-control-group">
                 <label for="stacked-state">Fecha de Nacimiento</label>
-                <input type="date" id="party" name="party" min="1975-01-01" max="2050-01-01" required>
+                <input type="date" id="party" name="party" value="$result['fecha_nacimiento']" min="1975-01-01" max="2050-01-01" required>
                 <span class="validity"></span>
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="stacked-state">Sexo</label>
-                    <input type="radio" id="checkbox-radio-option-two" name="optionsRadios" value="option1" checked="" /> Femenino</label>
-                    <input type="radio" id="checkbox-radio-option-two" name="optionsRadios" value="option1" checked="" /> Masculino</label>
+                    <input type="radio" id="checkbox-radio-option-two" value="$result['sexo']" name="optionsRadios" value="option1" checked="" /> Femenino</label>
+                    <input type="radio" id="checkbox-radio-option-two" value="$result['sexo']" name="optionsRadios" value="option1" checked="" /> Masculino</label>
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="stacked-state">Estado</label>
-                <select id="stacked-state" ="stacked-state">
+                <select id="stacked-state" value="$result['estado_civil']" name="stacked-state">
                     <option>Elige</option>
                     <option>Soltero</option>
                     <option>Casado</option>

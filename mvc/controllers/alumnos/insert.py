@@ -13,6 +13,7 @@ class Insert():
             return render.insert() # renderizando formulario.html
         except Exception as e:
             return "Error " + str(e.args)
+
     def POST(self):
         try:
             form = web.input()
@@ -24,8 +25,10 @@ class Insert():
             fecha_nacimiento = form.fecha_nacimiento
             sexo = form.sexo
             estado_civil = form.estado_civil
-            model_alumnos.insert(matricula, nombre, apellido_paterno, apellido_materno, edad, fecha_nacimiento, sexo, estado_civil)
+            model_alumnos.insert(matricula,nombre,apellido_paterno,apellido_materno,edad,fecha_nacimiento,sexo,estado_civil)
             web.seeother('/list')
         except Exception as e:
             print(e)
             return render.insert()
+    
+        
