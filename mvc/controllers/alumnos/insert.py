@@ -26,6 +26,7 @@ class Insert():
             sexo = form.sexo
             estado_civil = form.estado_civil
             model_alumnos.insert(matricula,nombre,apellido_paterno,apellido_materno,edad,fecha_nacimiento,sexo,estado_civil)
+            #return render.insert()
             web.seeother('/list')
         except Exception as e:
             print(e)

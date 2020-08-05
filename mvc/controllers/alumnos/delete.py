@@ -25,3 +25,14 @@ class Delete():
         except Exception as e:
             print(e)
             return "Error"
+
+    def POST(self, id_alumno):
+        try:
+            form = web.input()
+            id_alumno = form.id_alumno #hidden
+            print(id_alumno)
+            result = model_alumnos.delete(id_alumno)
+            web.seeother('/list')
+        except Exception as e:
+            print(e)
+            return "Error"
