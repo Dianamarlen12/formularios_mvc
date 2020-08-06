@@ -12,11 +12,12 @@ class Insert():
         try:
             return render.insert() # renderizando formulario.html
         except Exception as e:
-            return "Error " + str(e.args)
+            return "Error " 
 
     def POST(self):
         try:
             form = web.input()
+            print(form)
             matricula = form.matricula
             nombre = form.nombre
             apellido_paterno = form.apellido_paterno
@@ -32,4 +33,3 @@ class Insert():
             print(e)
             return render.insert()
     
-        

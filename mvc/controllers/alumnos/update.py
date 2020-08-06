@@ -14,9 +14,9 @@ class Update():
             print(result)
             return render.update(result) # renderizando formulario.html
         except Exception as e:
-            return "Error " + str(e.args)
+            return "Error "
 
-    def POST(self, id_alumno):
+    def POST(self,id_alumno):
         try:
             form = web.input()
             id_alumno = form.id_alumno

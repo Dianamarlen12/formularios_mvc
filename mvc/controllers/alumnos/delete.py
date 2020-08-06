@@ -10,7 +10,7 @@ class Delete():
 
     def GET(self, id_alumno):
         try:
-            result = model_personas.view(id_persona)[0]
+            result = model_alumnos.view(id_alumno)[0]
             return render.delete(result) # renderizando formulario.html
         except Exception as e:
             return "Error " + str(e.args)
@@ -20,7 +20,7 @@ class Delete():
         try:
             form = web.input()
             id_alumno = form.id_alumno # hidden
-            result = model_personas.delete(id_alumno)
+            result = model_alumnos.delete(id_alumno)
             web.seeother('/list')
         except Exception as e:
             print(e)

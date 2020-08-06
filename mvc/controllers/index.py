@@ -8,4 +8,4 @@ class Index():
         try:
             return render.index()
         except Exception as e:
-            return "Error " + str(e.args)
+            return "Error "

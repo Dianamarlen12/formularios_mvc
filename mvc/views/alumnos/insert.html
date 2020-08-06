@@ -62,9 +62,6 @@ section{
                 <li class="nav-item">
                   <a href="/list"><li><h4>LISTA</h4></li></a>
                   <a href="/insert"><li><h4>INSERTAR</h4></li></a>
-                  <a href="/delete"><li><h4>BORRAR</h4></li></a>
-                  <a href="/view"><li><h4>VER ALUMNO</h4></li></a>
-                  <a href="/update"><li><h4>MODIFICAR</h4></li></a>  
               </li>
               </ul>
           </nav>
@@ -142,18 +139,6 @@ section{
         </div>
         </fieldset>
     </form>
-    <!--VALIDACIÓN DE CAMPOS-->
-    <script>
-        var form = document.querySelector('.needs-validation');
-
-        form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-        })
-    </script>
     </center>
     </body>
 </html>
