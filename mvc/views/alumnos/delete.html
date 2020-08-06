@@ -95,22 +95,7 @@ section{
           <br>
           <div class="pure-control-group">
               <label for="stacked-state">Edad</label>
-              <select readonly id="stacked-state" name="stacked-state" value="$result['edad']">
-                  <option>Elige</option>
-                  <option>12</option>
-                  <option>13</option>
-                  <option>14</option>
-                  <option>15</option>
-                  <option>16</option>
-                  <option>17</option>
-                  <option>18</option>
-                  <option>19</option>
-                  <option>20</option>
-                  <option>21</option>
-                  <option>22</option>
-                  <option>23</option>
-                  <option>24</option>
-              </select>  años
+              <input type="text" readonly id="edad" name="edad" value="$result['edad']" placeholder="Ingresa tu edad" /> años
           </div>
           <br>
           <div class="pure-control-group">
@@ -121,8 +106,11 @@ section{
           <br>
           <div class="pure-control-group">
               <label for="stacked-state">Sexo</label>
-                  <input type="radio" readonly  id="checkbox-radio-option-two" name="optionsRadios" value="$result['sexo']" checked="" /> Femenino</label>
-                  <input type="radio" readonly id="checkbox-radio-option-two" name="optionsRadios" value="$result['sexo']" checked="" /> Masculino</label>
+              <select readonly name="sexo" id="sexo" value="$result['sexo']">
+                <option>Elige</option>
+                <option>Femenino</option>
+                <option>Masculino</option>
+              </select> 
           </div>
           <br>
           <div class="pure-control-group">
