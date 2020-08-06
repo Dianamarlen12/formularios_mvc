@@ -11,6 +11,7 @@ class List():
     def GET(self):
         try:
             result = model_alumnos.select()
+            print(result)
             return render.list(result)
         except Exception as e:
             print(e)

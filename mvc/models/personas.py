@@ -84,7 +84,7 @@ class Alumnos():
             print(e)
             return False
 
-    def update(self,matricula,nombre,apellido_paterno,apellido_materno,edad,fecha_nacimiento,sexo,estado_civil,id_alumno,):
+    def update(self,id_alumno,matricula,nombre,apellido_paterno,apellido_materno,edad,fecha_nacimiento,sexo,estado_civil):
         try:
             self.connect()
             query = ("UPDATE alumnos SET matricula=%s,nombre=%s,apellido_paterno=%s,apellido_materno=%s,edad=%s,fecha_nacimiento=%s,sexo=%s,estado_civil=%s WHERE id_alumno=%s;")

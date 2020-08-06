@@ -19,6 +19,7 @@ class Update():
     def POST(self,id_alumno):
         try:
             form = web.input()
+            print(form)
             id_alumno = form.id_alumno
             matricula = form.matricula
             nombre = form.nombre

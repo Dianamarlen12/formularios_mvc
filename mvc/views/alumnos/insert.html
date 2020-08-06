@@ -72,63 +72,51 @@ section{
         <fieldset>
             <div class="pure-control-group">
                 <label for="aligned-name">Matricula</label>
-                <input type="text" id="aligned-number" name="aligned-number"  placeholder="Ingresa Matricula" />
+                <input type="text" id="matricula" name="matricula"  placeholder="Ingresa Matricula" />
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="aligned-name">Nombre</label>
-                <input type="text" id="aligned-name" name="aligned-name" placeholder="Ingresa nombre" />
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa nombre" />
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="aligned-apepate">A.Paterno</label>
-                <input type="text" id="aligned-apepate" name="aligned-apepate" placeholder="Ingresa apellido" />
+                <input type="text" id="apellido_paterno" name="apellido_paterno" placeholder="Ingresa apellido" />
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="aligned-apemate">A.materno</label>
-                <input type="text" id="aligned-apemate" name="aligned-apemate" placeholder="Ingresa apellido" />
+                <input type="text" id="apellido_materno" name="apellido_materno" placeholder="Ingresa apellido" />
                 <span class="validity"></span>
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="stacked-state">Edad</label>
-                <select id="stacked-state" name="stacked-state">
-                    <option>Elige</option>
-                    <option>12</option>
-                    <option>13</option>
-                    <option>14</option>
-                    <option>15</option>
-                    <option>16</option>
-                    <option>17</option>
-                    <option>18</option>
-                    <option>19</option>
-                    <option>20</option>
-                    <option>21</option>
-                    <option>22</option>
-                    <option>23</option>
-                    <option>24</option>
-                </select>  años
+                <input type="text" id="edad" name="edad" placeholder="Ingresa tu edad" /> años
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="stacked-state">Fecha de Nacimiento</label>
-                <input type="date" id="party" name="party" min="1975-01-01" max="2050-01-01" required>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" min="1975-01-01" max="2050-01-01" required>
                 <span class="validity"></span>
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="stacked-state">Sexo</label>
-                    <input type="radio" id="checkbox-radio-option-two" name="optionsRadios" value="option1" checked="" /> Femenino</label>
-                    <input type="radio" id="checkbox-radio-option-two" name="optionsRadios" value="option1" checked="" /> Masculino</label>
+                <select name="sexo" id="sexo">
+                    <option>Elige</option>
+                    <option>Femenino</option>
+                    <option>Masculino</option>
+                </select>
             </div>
             <br>
             <div class="pure-control-group">
                 <label for="stacked-state">Estado</label>
-                <select id="stacked-state" name="stacked-state">
+                <select id="estado_civil" name="estado_civil">
                     <option>Elige</option>
-                    <option>Soltero</option>
-                    <option>Casado</option>
+                    <option>Soltero(a)</option>
+                    <option>Casado(a)</option>
                 </select>
             </div>
             <br>
